@@ -41,6 +41,10 @@ namespace Ejercicio2Fichero.Dtos
             this.identificador = identificador;
         }
 
+        public Cliente()
+        {
+        }
+
         override
         public  string ToString()
         {

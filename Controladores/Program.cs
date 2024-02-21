@@ -10,43 +10,28 @@ namespace Ejercicio2Fichero.Controladores
             string archivo = "C:\\Users\\profesor\\Desktop\\Adeudos\\NombreApellido1.txt";
             EmpresaInterfaz empresaInterfaz = new EmpresaImplementacion();
 
-            using(StreamWriter sw =  new StreamWriter(archivo))
+          
+            Empresa empresa = new Empresa();
+
+
+
+            using (StreamWriter sw = new StreamWriter(archivo))
             {
-                sw.WriteLine("\t\t\t Orden de domiciliacion de adeudo directo Sepa");
+                sw.WriteLine("\t\t\t\t Orden de domiciliacion de adeudo directo Sepa");
             }
-
-            List<Empresa> empresaLista = new List<Empresa>();
-            string formatoEmpresa;
-            string formatoCliente;
-
-            empresaInterfaz.empresa(empresaLista);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             using (StreamWriter sw = new StreamWriter(archivo, true))
             {
 
-                foreach (Empresa empresa1 in empresaLista)
-                {
-                    formatoEmpresa = empresa1.ToString();
+               sw.Write(
+                 "------------------------------------------------------------------------------------------------- \n" +
+                 $"Identificador del Acreedor:   {empresa.IdentificadorDelAcreedor}  \n" +
+                 $"Nombre del Acreedor:  {empresa.NombreDelAcreedor}  \n" +
+                 $"Direccion: {empresa.Direccion} \n" +
+                 $"Codigo postal - Poblacion - Provincia/Pais: {empresa.CodigoPostal}  -   {empresa.Poblacion}  -  {empresa.Provincia_Pais} \n" +
+                 "------------------------------------------------------------------------------------------------- \n");
 
-                    sw.Write(formatoEmpresa);
-
-                }
             }
-           
+
         }
     }
 }

@@ -43,18 +43,5 @@ namespace Ejercicio2Fichero.Dtos
         public Empresa()
         {
         }
-
-        override 
-         public string ToString()
-        {
-            return
-                "------------------------------------------------------------------------------------------------- \n" +
-                "Identificador del Acreedor: " + this.identificadorDelAcreedor + "\n" +
-                "Nombre del Acreedor: " + this.nombreDelAcreedor + "\n" +
-                "Direccion: " + this.direccion + "\n" +
-                "Codigo postal - Poblacion - Provincia/Pais: " + this.codigoPostal + " - " + this.poblacion + " - " + this.provincia_Pais + "\n" +
-                "------------------------------------------------------------------------------------------------- \n";
-           
-        }
     }
 }
