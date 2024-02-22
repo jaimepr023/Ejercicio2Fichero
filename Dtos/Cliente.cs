@@ -16,7 +16,7 @@ namespace Ejercicio2Fichero.Dtos
         string numIBAN = "aaaaa";
         string swift = "aaaaa";
         char tipoPago = 'A';
-        int identificador = 0;
+        int identificador;
 
         public string NombreCliente { get => nombreCliente; set => nombreCliente = value; }
         public string DireccionDelDeudor { get => direccionDelDeudor; set => direccionDelDeudor = value; }
